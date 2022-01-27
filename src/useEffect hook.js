@@ -14,7 +14,7 @@ function App(){
 
   React.useEffect(()=>{console.log("Called for age")},[age]);
   
-  React.useEffect(() => { return () => {console.log("called before mount and every useEffect and unmount")}});
+  React.useEffect(() => { return () => {console.log("called before every re-render and unmount")}});
   
   return  <div>    
             {[state, name, age].map(x => <div key={x}>{x}</div>)}
